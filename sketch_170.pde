@@ -5,12 +5,12 @@ Car myCar3;
 Car myCar4;// Two objects!
  
 void setup() {
-  size(400,206);
+  size(800,506);
   // Parameters go inside the parentheses when the object is constructed.
-  myCar1 = new Car(color(255,0,0),400,140,-2); 
-  myCar2 = new Car(color(0,0,255),0,30,1);
-  myCar3 = new Car(color(0,255,0),0,70,3);
-  myCar4 = new Car(color(255,255,0),400,170,-4);
+  myCar1 = new Car(color(255,0,0),800,340,-2); 
+  myCar2 = new Car(color(0,0,255),0,80,1);
+  myCar3 = new Car(color(0,255,0),0,170,3);
+  myCar4 = new Car(color(255,255,0),800,430,-4);
 }
  
 void draw() {
@@ -26,10 +26,10 @@ void draw() {
   
   strokeWeight(8);
   stroke(255);
-  line(0,6,400,6);
-  line(0,200,400,200);
-  line(0,100,400,100);
-  line(0,110,400,110);
+  line(0,6,800,6);
+  line(0,500,800,500);
+  line(0,240,800,240);
+  line(0,260,800,260);
 }
  
 // Even though there are multiple objects, we still only need one class. 
@@ -52,7 +52,7 @@ class Car {
     stroke(0);
     fill(c);
     rectMode(CENTER);
-    rect(xpos,ypos,20,10);
+    rect(xpos,ypos,90,60);
   }
  
   void drive() {
@@ -65,7 +65,7 @@ class Car {
   void driveN() {
     xpos = xpos + xspeed;
     if (xpos < 0) {
-      xpos = 400;
+      xpos = 800;
     }
   }
 }
